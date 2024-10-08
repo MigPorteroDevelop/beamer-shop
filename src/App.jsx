@@ -1,164 +1,31 @@
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
+import Beamer from './components/Beamer'
+import { db } from './data/db'
 
 function App() {
 
+  //state
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(db)
+  }, [])
+
   return (
     <>
-    <Header />
+      <Header />
       <main className="container-xl mt-5">
         <h2 className="text-center">Our Collection</h2>
 
         <div className="row mt-5">
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_01.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Lukather</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100">Add to cart</button>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_02.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">SRV</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_03.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Borland</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_04.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Vai</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_05.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Thompson</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_06.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">White</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_07.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Cobain</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_08.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Dale</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_09.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Krieger</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_10.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Campbell</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_11.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Reed</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 my-4 row align-items-center">
-            <div className="col-4">
-              <img className="img-fluid" src="./public/img/beamer_12.webp" alt="imagen beamer" />
-            </div>
-            <div className="col-8">
-              <h3 className="text-black fs-4 fw-bold text-uppercase">Hazel</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet
-                deserunt</p>
-              <p className="fw-black text-primary fs-3">$299</p>
-              <button type="button" className="btn btn-dark w-100 ">Add to cart</button>
-            </div>
-          </div>
+          {data.map((beamer) => (
+            <Beamer 
+              key={beamer.id}
+              beamer = {beamer}
+            />
+          )
+          )}
         </div>
       </main>
 
